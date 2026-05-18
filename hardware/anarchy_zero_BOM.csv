@@ -1,0 +1,99 @@
+Reference,Value,Footprint,LCSC,Qty,Description,Notes
+U1,ESP32-S3-WROOM-1-N16R8,RF_Module:ESP32-S3-WROOM-1,C2913202,1,ESP32-S3 module 16MB flash 8MB PSRAM,Check stock — source from Espressif direct if LCSC OOS
+U2,CC1101,Package_DFN_QFN:QFN-20_4x4mm_P0.5mm,C112296,1,Sub-GHz RF transceiver 300-928 MHz,
+U3,PN532,Package_LGA:LGA-32_5x5mm_P0.65mm,C80298,1,NFC/RFID controller 13.56 MHz,Verify LGA-32 footprint against NXP datasheet pad map
+U4,EM4095,Package_SO:SOIC-16_3.9x9.9mm_P1.27mm,C91508,1,125kHz LF RFID read/write IC,
+U5,BQ25180YBGR,Package_SON:DSBGA-9_1.5x1.5mm,C2832040,1,1A I2C USB-C LiPo charger,DSBGA-9 — confirm reflow profile with paste spec
+U6,AMS1117-3.3,Package_TO_SOT_SMD:SOT-223-3_TabPin2,C6186,1,3.3V 800mA LDO regulator,
+U_IR_RX,TSOP38238,OptoDevice:Vishay_MINICAST-3Pin,C112264,1,38kHz IR demodulator,
+DS1,WS2812B,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,C114586,8,Addressable RGB LED 5V,Order 10+ for attrition
+DS2,WS2812B,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,C114586,,See DS1,
+DS3,WS2812B,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,C114586,,See DS1,
+DS4,WS2812B,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,C114586,,See DS1,
+DS5,WS2812B,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,C114586,,See DS1,
+DS6,WS2812B,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,C114586,,See DS1,
+DS7,WS2812B,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,C114586,,See DS1,
+DS8,WS2812B,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,C114586,,See DS1,
+D_IR1,TSAL6400,LED_SMD:LED_0805_2012Metric,C193269,3,940nm IR TX LED 100mA peak,
+D_IR2,TSAL6400,LED_SMD:LED_0805_2012Metric,C193269,,See D_IR1,
+D_IR3,TSAL6400,LED_SMD:LED_0805_2012Metric,C193269,,See D_IR1,
+D1,SS34,Diode_SMD:D_SMA,C8678,1,Schottky 3A 40V VBUS protection,
+D_TVS1,PRTR5V0U2X,Package_TO_SOT_SMD:SOT-363_SC-70-6,C12333,1,USB ESD/TVS protection D+/D-,
+LED_CHG,Orange LED,LED_SMD:LED_0402_1005Metric,C72038,1,Charge status indicator,
+J1,USB4135-GF-A,Connector_USB:USB_C_Receptacle_GCT_USB4135-GF-A_Vertical,C2855501,1,USB-C receptacle GCT SMD,
+J2,PinHeader_1x03,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,C2337,3,Pogo pin 2.54mm — iButton contact,3 pins populated
+J3,PinHeader_2x09,Connector_PinHeader_2.54mm:PinHeader_2x09_P2.54mm_Vertical,C65114,1,18-pin GPIO header 2×9 2.54mm,Flipper Zero compatible pinout
+J_DISP,FH12-8S-0.5SH,Connector_FFC-FPC:Hirose_FH12-8S-0.5SH_1x08-1MP_P0.5mm_Horizontal,C455276,1,8-pin 0.5mm FPC horizontal connector,Confirm orientation vs display cable
+J_SD,DM3AT-SF-PEJM5,Connector_Card:microSD_HC_Hirose_DM3AT-SF-PEJM5,C145797,1,Push-push microSD slot with card detect,
+BT1,JST PH 2-pin,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,C173752,1,JST PH 2-pin LiPo battery connector,
+LS1,BCE-MX8530A,Buzzer_Beeper:CUI_CPS-8530-SMT,C96095,1,SMD passive piezo buzzer 8.5mm,
+Q_IR,2N7002,Package_TO_SOT_SMD:SOT-23,C8545,1,N-MOSFET IR LED driver,
+Q_BL,2N7002,Package_TO_SOT_SMD:SOT-23,C8545,1,N-MOSFET backlight switch,
+Q_BUZ,MMBT3904,Package_TO_SOT_SMD:SOT-23,C20526,1,NPN buzzer driver,
+Q_5V,SI2301,Package_TO_SOT_SMD:SOT-23,C10487,1,P-MOSFET 5V header switch,
+L1,12nH,Inductor_SMD:L_0402_1005Metric,C76569,1,CC1101 RF balun inductor 12nH 0402,1% tolerance preferred
+L_NFC1,PCB coil,Inductor_SMD:L_NFC_PCB_Coil_3T,,1,NFC PCB antenna coil — custom routed trace,3-turn 47×38mm on F.Cu; not a purchased part
+L_LF1,PCB coil,Inductor_SMD:L_LF_PCB_Coil_8T,,1,LF RFID PCB antenna coil — custom routed trace,8-turn 60×40mm on B.Cu; not a purchased part
+FB1,BLM18PG601SN1D,Inductor_SMD:L_0402_1005Metric,C1015,1,Ferrite bead 600R@100MHz 0402,3V3 → 3V3_RF isolation
+SW_BOOT,TL3342,Button_Switch_SMD:SW_SPST_TL3342,C318884,1,Tactile switch BOOT,
+SW_UP,TL3342,Button_Switch_SMD:SW_SPST_TL3342,C318884,8,Tactile switch D-pad and side buttons,SW_UP/DOWN/LEFT/RIGHT/OK/BACK/L/R all same part
+SW_DOWN,TL3342,Button_Switch_SMD:SW_SPST_TL3342,C318884,,See SW_UP,
+SW_LEFT,TL3342,Button_Switch_SMD:SW_SPST_TL3342,C318884,,See SW_UP,
+SW_RIGHT,TL3342,Button_Switch_SMD:SW_SPST_TL3342,C318884,,See SW_UP,
+SW_OK,TL3342,Button_Switch_SMD:SW_SPST_TL3342,C318884,,See SW_UP,
+SW_BACK,TL3342,Button_Switch_SMD:SW_SPST_TL3342,C318884,,See SW_UP,
+SW_L,TL3342,Button_Switch_SMD:SW_SPST_TL3342,C318884,,See SW_UP,
+SW_R,TL3342,Button_Switch_SMD:SW_SPST_TL3342,C318884,,See SW_UP,
+ANT1,SMA edge mount,Connector_Coaxial:SMA_Amphenol_132289_EdgeMount,C701751,1,SMA edge connector for sub-GHz antenna,Or spring antenna pad — omit if using PCB antenna
+R1,10k,Resistor_SMD:R_0402_1005Metric,C25744,1,EN pull-up resistor,
+R2,56k,Resistor_SMD:R_0402_1005Metric,C25756,1,CC1101 RBIAS 1% tolerance,Use 1% part
+R3,51R,Resistor_SMD:R_0402_1005Metric,C25082,1,CC1101 SI series resistor,
+R4,51R,Resistor_SMD:R_0402_1005Metric,C25082,1,CC1101 SCLK series resistor,
+R_CC1,5.1k,Resistor_SMD:R_0402_1005Metric,C23186,2,USB-C CC1 pull-down,
+R_CC2,5.1k,Resistor_SMD:R_0402_1005Metric,C23186,,See R_CC1,
+R_ILIM,4.7k,Resistor_SMD:R_0402_1005Metric,C25900,1,BQ25180 input current limit,
+R_NTC,10k NTC,Resistor_SMD:R_0402_1005Metric,C14418,1,NTC thermistor battery temp sense,
+R_1W,4.7k,Resistor_SMD:R_0402_1005Metric,C25900,1,1-Wire iButton pull-up,
+R_IR_G,100R,Resistor_SMD:R_0402_1005Metric,C25076,1,IR LED gate resistor,
+R_IR1,15R,Resistor_SMD:R_0402_1005Metric,C25091,1,IR LED current limit,
+R_IRFILTER,100R,Resistor_SMD:R_0402_1005Metric,C25076,1,TSOP38238 VCC filter,
+R_BUZ,1k,Resistor_SMD:R_0402_1005Metric,C21190,1,Buzzer NPN base resistor,
+R_CHG,1k,Resistor_SMD:R_0402_1005Metric,C21190,1,Charge LED current limit,
+R_5VSW,10k,Resistor_SMD:R_0402_1005Metric,C25744,1,P-FET gate pull-up VSYS,
+RN1,10k x8,Resistor_SMD:R_Array_Concave_4x0402,C57743,1,Button pull-up resistor pack 8×10k,
+R_IO0_PU,10k,Resistor_SMD:R_0402_1005Metric,C25744,1,IO0 pull-up for boot strapping safety,New in v0.2 — SD card detect RC filter
+C1,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,1,U1 VCC decoupling,
+C2,10uF,Capacitor_SMD:C_0805_2012Metric,C15850,1,U1 VCC bulk decoupling,
+C3,12pF,Capacitor_SMD:C_0402_1005Metric,C1555,1,CC1101 RF balun cap C1,
+C4,27pF,Capacitor_SMD:C_0402_1005Metric,C1561,1,CC1101 RF balun cap C2,
+C5,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,1,CC1101 DCOUPL — within 1mm of pin,
+C6,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,1,CC1101 VDD decoupling,
+C7,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,1,CC1101 AVDD decoupling,
+C8,1uF,Capacitor_SMD:C_0402_1005Metric,C15849,1,PN532 VDD_TX bulk — within 1mm of pin,
+C9,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,1,PN532 VDD_RX decoupling,
+C10,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,1,PN532 VDD decoupling,
+C11,1uF,Capacitor_SMD:C_0402_1005Metric,C15849,1,PN532 TVDD bulk,
+C_NFC1,56pF,Capacitor_SMD:C_0402_1005Metric,C1563,1,NFC antenna tuning cap Cp,Adjust value after coil L measurement
+C_NFC2,33pF,Capacitor_SMD:C_0402_1005Metric,C1560,1,NFC antenna tuning cap Cs,Adjust value after coil L measurement
+C_LF1,3.9nF,Capacitor_SMD:C_0402_1005Metric,C1548,1,EM4095 RES1 resonance cap,Adjust after coil measurement
+C_LF2,12nF,Capacitor_SMD:C_0402_1005Metric,C57112,1,EM4095 RES2 resonance cap,Adjust after coil measurement
+C_SYS1,10uF,Capacitor_SMD:C_0805_2012Metric,C15850,1,BQ25180 SYS output bulk,
+C_BAT1,10uF,Capacitor_SMD:C_0805_2012Metric,C15850,1,BQ25180 BAT filter,
+C12,10uF,Capacitor_SMD:C_0805_2012Metric,C15850,1,AMS1117 output cap,
+C13,10uF,Capacitor_SMD:C_0805_2012Metric,C15850,1,AMS1117 input cap,
+C_RF1,10uF,Capacitor_SMD:C_0805_2012Metric,C15850,1,3V3_RF bulk cap post ferrite,
+C_RF2,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,1,3V3_RF HF decoupling,
+C_SD,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,1,MicroSD VDD decoupling,
+C_DISP,10uF,Capacitor_SMD:C_0805_2012Metric,C15850,1,Display VCC bulk,
+C_IRFILTER,4.7uF,Capacitor_SMD:C_0805_2012Metric,C16214,1,TSOP38238 VCC filter cap,
+C_LED1,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,8,WS2812B bypass cap — 1 per LED within 2mm,
+C_LED2,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,,See C_LED1,
+C_LED3,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,,See C_LED1,
+C_LED4,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,,See C_LED1,
+C_LED5,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,,See C_LED1,
+C_LED6,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,,See C_LED1,
+C_LED7,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,,See C_LED1,
+C_LED8,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,,See C_LED1,
+C_IO0_RC,100nF,Capacitor_SMD:C_0402_1005Metric,C14663,1,IO0 RC filter cap — boot strapping,New in v0.2 — pairs with R_IO0_PU
+R_LED_DIN,300R,Resistor_SMD:R_0402_1005Metric,C25107,1,WS2812B DIN series resistor,
+U_LVLSHIFT,74HCT1G125GW,Package_TO_SOT_SMD:SOT-353_SC-70-5,C157010,1,Single buffer level shifter 3V3→5V for LED DIN,
